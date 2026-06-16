@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password | Secure Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #64748b;
+            --bg: #f1f5f9;
+            --white: #ffffff;
+            
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+           
+    
+        }
+
+        body {
+            background-color: var(--bg);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+        }
+
+        .container {
+            background: var(--white);
+            max-width: 400px;
+            width: 90%;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: #eef2ff;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+
+        .btn-reset {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-reset:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Success State (Hidden by default) */
+        #success-state {
+            display: none;
+        }
+
+        .success-animation {
+            color: #10b981;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="reset-card">
+        <div id="input-state">
+            <div class="icon-box">🔑</div>
+            <h2>Forgot Password?</h2>
+            <p>No worries, we'll send you reset instructions to your registered email.</p>
+
+            <form id="forgotForm">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="enter your email" required>
+                </div>
+                <button type="submit" class="btn-reset">Send Reset Link</button>
+            </form>
+        </div>
+
+        <div id="success-state">
+            <div class="success-animation">Check Your Email</div>
+            <h2>Link Sent!</h2>
+            <p>We have sent a password recovery link to <br><strong id="user-email"></strong></p>
+            <button class="btn-reset" onclick="location.reload()">Try another email</button>
+        </div>
+
+        <a href="a.html" class="back-link">← Back to Login</a>
+    </div>
+
+    <script>
+        document.getElementById('forgotForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const inputState = document.getElementById('input-state');
+            const successState = document.getElementById('success-state');
+            const emailDisplay = document.getElementById('user-email');
+
+            // Simulate an API request delay
+            const btn = e.target.querySelector('button');
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Hide the form and show the success message
+                inputState.style.display = 'none';
+                successState.style.display = 'block';
+                emailDisplay.innerText = email;
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

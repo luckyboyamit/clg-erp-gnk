@@ -1,0 +1,160 @@
+/* style.css */
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f6; }
+.hidden { display: none !important; }
+
+
+.auth-wrapper {
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url(Gemini_Generated_Image_89uea789uea789ue\ copy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1{color: rgb(34, 193, 113);
+    font-size: 2.5em;
+margin-left: 30%;
+}
+h3{font-size: 3em;
+    
+}
+h2{font-size: 2.5em;color: #3555e4;
+}
+h4{
+    color: #ecf0f1;
+}
+
+
+
+.dashbord{
+    background-image: url(Gemini_Generated_Image_89uea789uea789ue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Glassmorphism Card */
+.login-card {
+    background-color: #ecf0f1;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+h1 { color: #1c3cdd; margin-bottom: 5px; }
+.subtitle { color: #777; font-size: 14px; margin-bottom: 30px; }
+
+/* Floating Input Group */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Input Focus Animation */
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #667eea;
+}
+
+/* Links & Buttons */
+.extra-options {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-link {
+    font-size: 13px;
+    color: #764ba2;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #764ba2, #667eea);
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.5);
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-text a {
+    color: #667eea;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* डैशबोर्ड लेआउट */
+
+#dashboard { display: flex; height: 100vh; }
+.sidebar { width: 250px; background: #2c3e50; color: white; padding: 20px; }
+
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { padding: 15px; border-bottom: 1px solid #34495e; cursor: pointer; transition: 0.3s; }
+.sidebar li:hover { background: #34495e; }
+
+.content { flex-grow: 1; padding: 30px; background: #ecf0f1; }
+header { border-bottom: 2px solid #bdc3c7; margin-bottom: 20px; }
+
+/* कार्ड स्टाइल */
+.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }

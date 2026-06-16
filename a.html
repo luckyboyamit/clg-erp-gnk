@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ERP Dashboard</title>
+    <link rel="stylesheet" href="n.css">
+   
+</head>
+<body>
+  
+<h1>GUGU NANAK KHALSHA INTER COLLAGE</h1>
+  
+<div id="login-container" class="auth-wrapper">
+    <div class="login-card">
+        
+            <img src="image copy.png" alt="description" width="150" height="150">
+        <h2>ERP LOG IN </h2>
+        <p class="subtitle">log in your account</p>
+        
+        <div class="input-group">
+            <input type="text" id="username" required>
+            <label>user name</label>
+        </div>
+        
+        <div class="input-group">
+            <input type="password" id="password" required>
+            <label>password</label>
+        </div>
+
+        <div class="extra-options">
+            <a href="forget.html" class="forgot-link">forgot password</a>
+        </div>
+
+        <button onclick="login()" class="login-btn">log in </button>
+
+        <p class="footer-text">
+         no account ? <a href="regisratin.html">Register now</a>
+         <p>proceed by GNK inter collage</p>
+        </p>
+        <p id="error-msg"></p>
+    </div>
+</div>
+    <div id="dashboard" class="hidden">
+        <nav class="sidebar">
+            <h2>ERP portal</h2>
+            <ul>
+                <li onclick="showSection('profile')">Profile</li>
+                <li onclick="showSection('attendance')">attendance</li>
+                <li onclick="showSection('fees')">fees details </li>
+                <li onclick="showSection('subjects')">Subject  </li>
+                <li onclick="showSection('teacher')"></li>
+                <li onclick="logout()" class="logout-btn">log out</li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1 id="section-title"> G N K inter collage Students portal</h1>
+            </header>
+
+            <div id="main-display">
+                <p>pleace select one option for information</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="m.js"></script>
+</body>
+</html>
